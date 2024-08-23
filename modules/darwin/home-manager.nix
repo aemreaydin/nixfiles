@@ -24,13 +24,11 @@ in
       home = {
         enableNixpkgsReleaseCheck = false;
         packages = pkgs.callPackage ./packages.nix { };
-        file = lib.mkMerge [
-        ];
+        file = {
+          ".config/kitty" = { source = config.lib.file.mkOutOfStoreSymlink ./kitty; };
+          ".config/nvim" = { source = config.lib.file.mkOutOfStoreSymlink ./nvim; };
+        };
         stateVersion = "24.05";
-      };
-      file = {
-        ".config/kitty" = { source = config.lib.file.mkOutOfStoreSymlink ../../kitty; };
-        ".config/nvim" = { source = config.lib.file.mkOutOfStoreSymlink ../../nvim; };
       };
       programs = {
         lazygit = { enable = true; };
