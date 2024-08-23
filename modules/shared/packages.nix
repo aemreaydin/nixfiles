@@ -29,6 +29,7 @@ with pkgs; [
   zsh-powerlevel10k
   ranger
 
+  jetbrains.goland
   # alacritty
   # aspell
   # aspellDicts.en
@@ -62,7 +63,4 @@ with pkgs; [
   nodePackages.prettier
   nodejs
   python3
-  (pkgs.writeShellScriptBin "rust" ''
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-  '')
 ]

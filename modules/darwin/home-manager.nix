@@ -50,18 +50,10 @@ in
     { path = "/Applications/Arc.app/"; }
     { path = "/Applications/Sofa.app/"; }
     { path = "/Applications/Diversion Desktop.app/"; }
+    { path = "/Applications/Linear.app/"; }
     { path = "/Applications/GoLand.app/"; }
     { path = "/Applications/Unity Hub.app/"; }
-    {
-      path = "${config.users.users.${user}.home}/.local/share/";
-      section = "others";
-      options = "--sort name --view grid --display folder";
-    }
-    {
-      path = "${config.users.users.${user}.home}/.local/share/downloads";
-      section = "others";
-      options = "--sort name --view grid --display stack";
-    }
+    { path = "/Applications/Nix Apps/Visual Studio Code.app/"; }
   ];
 
 }

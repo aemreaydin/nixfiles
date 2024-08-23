@@ -40,8 +40,15 @@ let user = "emreaydn"; in
     stateVersion = 4;
 
     defaults = {
+
+      WindowManager = {
+        EnableStandardClickToShowDesktop = false;
+        HideDesktop = true;
+        StandardHideDesktopIcons = true;
+      };
+
       NSGlobalDomain = {
-        AppleShowAllExtensions = true;
+        AppleShowAllExtensions = false;
         ApplePressAndHoldEnabled = false;
 
         # 120, 90, 60, 30, 12, 6, 2
@@ -53,6 +60,7 @@ let user = "emreaydn"; in
         "com.apple.mouse.tapBehavior" = 1;
         "com.apple.sound.beep.volume" = 0.0;
         "com.apple.sound.beep.feedback" = 0;
+        "com.apple.swipescrolldirection" = false;
       };
 
       dock = {
