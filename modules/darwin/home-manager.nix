@@ -25,8 +25,8 @@ in
         enableNixpkgsReleaseCheck = false;
         packages = pkgs.callPackage ./packages.nix { };
         file = {
-          ".config/kitty" = { source = config.lib.file.mkOutOfStoreSymlink ./kitty; };
-          ".config/nvim" = { source = config.lib.file.mkOutOfStoreSymlink ./nvim; };
+          ".config/kitty" = { source = config.lib.file.mkOutOfStoreSymlink "{home.homeDirectory}/.config/kitty"; };
+          ".config/nvim" = { source = config.lib.file.mkOutOfStoreSymlink "{home.homeDirectory}/.config/nvim"; };
         };
         stateVersion = "24.05";
       };
@@ -37,9 +37,6 @@ in
           viAlias = true;
           vimAlias = true;
           defaultEditor = true;
-        };
-        kitty = {
-          enable = true;
         };
         ranger = { enable = true; };
         ripgrep = { enable = true; };
