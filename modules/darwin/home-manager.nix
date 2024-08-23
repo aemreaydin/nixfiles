@@ -25,8 +25,8 @@ in
         enableNixpkgsReleaseCheck = false;
         packages = pkgs.callPackage ./packages.nix { };
         file = {
-          ".config/kitty" = { source = config.lib.file.mkOutOfStoreSymlink "{home.homeDirectory}/.config/kitty"; };
-          ".config/nvim" = { source = config.lib.file.mkOutOfStoreSymlink "{home.homeDirectory}/.config/nvim"; };
+          ".config/kitty" = { source = config.lib.file.mkOutOfStoreSymlink "{home.homeDirectory}/nixfiles/kitty"; };
+          ".config/nvim" = { source = config.lib.file.mkOutOfStoreSymlink "{home.homeDirectory}/nixfiles/nvim"; };
         };
         stateVersion = "24.05";
       };
