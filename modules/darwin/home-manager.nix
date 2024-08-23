@@ -17,8 +17,9 @@ in
     shell = pkgs.zsh;
   };
 
-  homebrew = {
-    enable = true;
+  home.file = {
+    ".config/kitty" = { source = config.lib.file.mkOutOfStoreSymlink ../../kitty; };
+    ".config/nvim" = { source = config.lib.file.mkOutOfStoreSymlink ../../nvim; };
   };
 
   # Enable home-manager
@@ -33,29 +34,21 @@ in
         stateVersion = "24.05";
       };
       programs = {
-        raycast = { enable = true; };
         lazygit = { enable = true; };
-        unityhub = { enable = true; };
         neovim = {
           enable = true;
-          extraConfig = lib.fileContents ../../nvim;
           viAlias = true;
           vimAlias = true;
           defaultEditor = true;
         };
         kitty = {
           enable = true;
-          extraConfig = lib.fileContents ../../kitty;
         };
         ranger = { enable = true; };
         ripgrep = { enable = true; };
         fzf = { enable = true; };
         zoxide = { enable = true; };
         lsd = { enable = true; };
-        cmake = { enable = true; };
-        ninja = { enable = true; };
-        nodejs_22 = { enable = true; };
-        tree-sitter = { enable = true; };
         bat = { enable = true; };
         go = { enable = true; };
       } // import ../shared/home-manager.nix { inherit config pkgs lib; };
