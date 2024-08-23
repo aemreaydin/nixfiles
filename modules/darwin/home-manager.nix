@@ -21,6 +21,10 @@ in
     useGlobalPkgs = true;
     users.${user} = { pkgs, config, lib, ... }: {
       home = {
+        sessionVariables = {
+          EDITOR = "nvim";
+          TERMINAL = "kitty";
+        };
         enableNixpkgsReleaseCheck = false;
         packages = pkgs.callPackage ./packages.nix { };
         file = {
