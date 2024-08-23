@@ -31,20 +31,12 @@ in
         stateVersion = "24.05";
       };
       programs = {
-        lazygit = { enable = true; };
         neovim = {
           enable = true;
           viAlias = true;
           vimAlias = true;
           defaultEditor = true;
         };
-        ranger = { enable = true; };
-        ripgrep = { enable = true; };
-        fzf = { enable = true; };
-        zoxide = { enable = true; };
-        lsd = { enable = true; };
-        bat = { enable = true; };
-        go = { enable = true; };
       } // import ../shared/home-manager.nix { inherit config pkgs lib; };
     };
   };
