@@ -2,7 +2,6 @@
 
 let
   user = "emreaydn";
-  additionalFiles = import ./files.nix { inherit user config pkgs; };
 in
 {
   imports = [
@@ -25,8 +24,8 @@ in
         enableNixpkgsReleaseCheck = false;
         packages = pkgs.callPackage ./packages.nix { };
         file = {
-          ".config/kitty" = { source = config.lib.file.mkOutOfStoreSymlink "{home.homeDirectory}/nixfiles/kitty"; };
-          ".config/nvim" = { source = config.lib.file.mkOutOfStoreSymlink "{home.homeDirectory}/nixfiles/nvim"; };
+          ".config/kitty" = { source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixfiles/kitty"; };
+          ".config/nvim" = { source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixfiles/nvim"; };
         };
         stateVersion = "24.05";
       };
@@ -46,7 +45,7 @@ in
   local.dock.entries = [
     { path = "/Applications/Arc.app/"; }
     { path = "/Applications/Sofa.app/"; }
-    { path = "/Applications/Diversion.app/"; }
+    { path = "/Applications/Diversion Desktop.app/"; }
     { path = "/Applications/GoLand.app/"; }
     { path = "/Applications/Unity Hub.app/"; }
     {

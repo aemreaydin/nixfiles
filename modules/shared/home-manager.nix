@@ -8,6 +8,10 @@ in
 {
   zsh = {
     enable = true;
+    autosuggestion = {
+      enable = true;
+    };
+    enableCompletion = true;
     autocd = false;
     plugins = [
       {
@@ -21,7 +25,6 @@ in
         file = "p10k.zsh";
       }
     ];
-
     initExtraFirst = ''
       if [[ -f /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ]]; then
         . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
@@ -41,9 +44,24 @@ in
       # Use difftastic, syntax-aware diffing
       alias diff=difft
 
-      # Always color ls and group directories
-      alias ls='ls --color=auto'
+      alias cd=z
     '';
+
+    initExtra = ''
+      bindkey '^ ' autosuggest-accept
+      bindkey '^h' backward-word
+      bindkey '^l' forward-word
+    '';
+  };
+
+  zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  lsd = {
+    enable = true;
+    enableAliases = true;
   };
 
   git = {

@@ -8,8 +8,8 @@ with pkgs; [
   vscode
   fzf
   zoxide
-  lsd
   cmake
+  kitty
   ninja
   tree-sitter
   bat
