@@ -4,8 +4,8 @@ with pkgs; [
   # General packages for development and system management
   raycast
   lazygit
-  neovim
   ripgrep
+  vscode
   fzf
   zoxide
   lsd
