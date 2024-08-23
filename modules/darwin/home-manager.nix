@@ -17,11 +17,6 @@ in
     shell = pkgs.zsh;
   };
 
-  home.file = {
-    ".config/kitty" = { source = config.lib.file.mkOutOfStoreSymlink ../../kitty; };
-    ".config/nvim" = { source = config.lib.file.mkOutOfStoreSymlink ../../nvim; };
-  };
-
   # Enable home-manager
   home-manager = {
     useGlobalPkgs = true;
@@ -32,6 +27,10 @@ in
         file = lib.mkMerge [
         ];
         stateVersion = "24.05";
+      };
+      file = {
+        ".config/kitty" = { source = config.lib.file.mkOutOfStoreSymlink ../../kitty; };
+        ".config/nvim" = { source = config.lib.file.mkOutOfStoreSymlink ../../nvim; };
       };
       programs = {
         lazygit = { enable = true; };
