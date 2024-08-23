@@ -38,14 +38,14 @@ in
         unityhub = { enable = true; };
         neovim = {
           enable = true;
-          extraConfig = lib.fileContents ~/nixfiles/nvim;
+          extraConfig = lib.fileContents ../../nvim;
           viAlias = true;
           vimAlias = true;
           defaultEditor = true;
         };
         kitty = {
           enable = true;
-          extraConfig = lib.fileContents ~/nixfiles/kitty;
+          extraConfig = lib.fileContents ../../kitty;
         };
         ranger = { enable = true; };
         ripgrep = { enable = true; };

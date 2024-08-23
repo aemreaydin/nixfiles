@@ -55,6 +55,11 @@ in
     lfs = {
       enable = true;
     };
+    aliases = {
+      st = "status";
+      co = "checkout";
+      l = "log --graph --full-history --all --color --tags --decorate";
+    };
     extraConfig = {
       init.defaultBranch = "main";
       core = {
