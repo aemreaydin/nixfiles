@@ -4,7 +4,6 @@ with pkgs; [
   # General packages for development and system management
   raycast
   lazygit
-  unityhub
   neovim
   ripgrep
   fzf
