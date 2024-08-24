@@ -51,7 +51,7 @@ in
     { path = "/Applications/Sofa.app/"; }
     { path = "/Applications/Diversion Desktop.app/"; }
     { path = "/Applications/Linear.app/"; }
-    { path = "/Applications/GoLand.app/"; }
+    { path = "/Applications/Nix Apps/GoLand.app/"; }
     { path = "/Applications/Unity Hub.app/"; }
     { path = "/Applications/Nix Apps/Visual Studio Code.app/"; }
   ];

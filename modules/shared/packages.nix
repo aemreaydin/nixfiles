@@ -30,6 +30,8 @@ with pkgs; [
   ranger
 
   jetbrains.goland
+
+  discord
   # alacritty
   # aspell
   # aspellDicts.en
