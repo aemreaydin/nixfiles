@@ -30,6 +30,8 @@ with pkgs; [
   ranger
 
   jetbrains.goland
+  beekeeper-studio
+  # blender
 
   discord
   # alacritty
