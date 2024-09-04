@@ -29,8 +29,10 @@ with pkgs; [
   zsh-powerlevel10k
   ranger
 
+  obsidian
   jetbrains.goland
-  beekeeper-studio
+  bruno
+  hurl
   # blender
 
   discord
