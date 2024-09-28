@@ -65,6 +65,14 @@ in
     enableAliases = true;
   };
 
+  vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      golang.go
+      vscodevim.vim
+    ];
+  };
+
   git = {
     enable = true;
     ignores = [ "*.swp" ];
