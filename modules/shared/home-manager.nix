@@ -42,10 +42,20 @@ in
 
       export EDITOR="nvim"
 
-      # Use difftastic, syntax-aware diffing
-      alias diff=difft
-
       alias cd=z
+
+      alias gs="git status"
+      alias gc="git commit"
+      alias gpush="git push"
+      alias ga="git add"
+      alias gall="git add ."
+      alias gpull="git pull"
+      alias gd="git diff"
+      alias gb="git branch"
+      alias gch="git checkout"
+      alias gchb="git checkout -b"
+      alias gsh="git show"
+      alias gt="git log --graph --full-history --all --color --tags --decorate"
     '';
 
     initExtra = ''

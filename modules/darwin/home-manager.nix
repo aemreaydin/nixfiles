@@ -48,12 +48,11 @@ in
   local.dock.enable = true;
   local.dock.entries = [
     { path = "/Applications/Arc.app/"; }
-    { path = "/Applications/Sofa.app/"; }
-    { path = "/Applications/Diversion Desktop.app/"; }
-    { path = "/Applications/Linear.app/"; }
-    { path = "/Applications/Nix Apps/GoLand.app/"; }
-    { path = "/Applications/Unity Hub.app/"; }
-    { path = "/Applications/Nix Apps/Visual Studio Code.app/"; }
+    { path = "~/Applications/Home Manager Apps/kitty.app/"; }
+    { path = "~/Applications/Home Manager Apps/Bruno.app/"; }
+    { path = "/Applications/Sofa.app/.app/"; }
+    { path = "/Applications/GeForceNOW.app/"; }
+    { path = "/System/Applications/Books.app/"; }
   ];
 
 }
