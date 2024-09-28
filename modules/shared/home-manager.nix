@@ -55,7 +55,7 @@ in
       alias gch="git checkout"
       alias gchb="git checkout -b"
       alias gsh="git show"
-      alias gt="git log --graph --full-history --all --color --tags --decorate"
+      alias gt="git log --graph --full-history --all --color --tags --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
     '';
 
     initExtra = ''
