@@ -36,6 +36,9 @@ with pkgs; [
   # blender
 
   discord
+
+  vulkan-loader
+  vulkan-volk
   # alacritty
   # aspell
   # aspellDicts.en
