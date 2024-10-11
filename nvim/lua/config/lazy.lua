@@ -17,6 +17,10 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+
+    { "nvim-neo-tree/neo-tree.nvim", enabled = false },
+    { "akinsho/bufferline.nvim", enabled = false },
+
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.angular" },
     { import = "lazyvim.plugins.extras.lang.go" },
@@ -40,7 +44,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.util.project" },
     { import = "lazyvim.plugins.extras.util.rest" },
     { import = "plugins" },
-    { "nvim-neo-tree/neo-tree.nvim", enabled = false },
   },
   defaults = {
     lazy = false,

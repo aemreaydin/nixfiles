@@ -39,6 +39,11 @@ with pkgs; [
 
   vulkan-loader
   vulkan-volk
+  glfw
+
+  go-task
+  ninja
+  vcpkg
   # alacritty
   # aspell
   # aspellDicts.en

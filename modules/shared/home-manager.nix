@@ -43,9 +43,12 @@ in
       export EDITOR="nvim"
 
       if [[ $(uname) == "Darwin" ]]; then
-        VULKAN_SDK=$HOME/VulkanSDK/1.3.290.0/
-        export DYLD_LIBRARY_PATH=$VULKAN_SDK/macos/lib:$DYLD_LIBRARY_PATH
-        export VULKAN_LAYER_PATH=$VULKAN_SDK/macos/shared/vulkan/explicit.d
+        VULKAN_SDK=$HOME/VulkanSDK/1.3.290.0
+        source $VULKAN_SDK/setup-env.sh
+        export PATH=$VULKAN_SDK/bin:$PATH
+        # export DYLD_LIBRARY_PATH=$VULKAN_SDK/lib:$DYLD_LIBRARY_PATH
+        # export VULKAN_LAYER_PATH=$VULKAN_SDK/share/vulkan/explicit_layer.d
+        # export VK_ICD_FILENAMES=$VULKAN_SDK/share/vulkan/icd.d/MoltenVK_icd.json
       fi
 
       alias cd=z
