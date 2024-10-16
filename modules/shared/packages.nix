@@ -1,80 +1,77 @@
 { pkgs }:
 
 with pkgs; [
-  # General packages for development and system management
-  raycast
+  # Progrmming Tools and Languages
+  cmake
+  ninja
+  go
+  sqlite
+  go-task
+  sqlc
+  vcpkg
+  python3
+  nodejs
+  nodePackages.npm
+  nodePackages.prettier
+  (pkgs.writeShellScriptBin "rust" ''
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+  '')
+
+  # Version Control and Git Tools
   lazygit
-  ripgrep
+
+  # Text Editors and IDEs
   vscode
+  jetbrains.goland
+
+  # Terminal Emulators and Enhancements
+  wezterm
+
+  # Shell and Command-Line Utilities
+  thefuck
+  bat
+  oh-my-zsh
   fzf
   zoxide
-  cmake
-  kitty
-  ninja
-  tree-sitter
+  ripgrep
   bat
-  go
+  ranger
+  jq
+  tree-sitter
+
+  # System Monitoring and Management
   btop
   neofetch
-  openssh
-  sqlite
-  wget
-  zip
-  killall
   htop
-  jetbrains-mono
-  jq
-  unrar
-  unzip
-  zsh-powerlevel10k
-  ranger
+  killall
 
-  obsidian
-  jetbrains.goland
+  # File Management and Compression
+  zip
+  unzip
+  unrar
+
+  # Network Tools
+  wget
+  openssh
+
+  # API Development and Testing
   bruno
   hurl
-  # blender
 
-  discord
-
+  # Graphics and Game Development
   vulkan-loader
   vulkan-volk
   glfw
 
-  go-task
-  ninja
-  vcpkg
-  # alacritty
-  # aspell
-  # aspellDicts.en
-  # bash-completion
-  # bat
-  # coreutils
+  # Fonts
+  jetbrains-mono
 
-  # Encryption and security tools
-  # age
-  # age-plugin-yubikey
-  # gnupg
-  # libfido2
+  # Productivity and Note-taking
+  obsidian
 
-  # Cloud-related tools and SDKs
-  # docker
-  # docker-compose
+  # Communication
+  discord
 
-  # Media-related packages
-  # emacs-all-the-icons-fonts
-  # dejavu_fonts
-  # ffmpeg
-  # fd
-  # font-awesome
-  # hack-font
-  # noto-fonts
-  # noto-fonts-emoji
-  # meslo-lgs-nf
-
-  # Node.js development tools
-  nodePackages.npm # globally install npm
-  nodePackages.prettier
-  nodejs
-  python3
+  # Application Launchers
+  raycast
 ]

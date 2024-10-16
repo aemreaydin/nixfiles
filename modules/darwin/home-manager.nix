@@ -28,7 +28,6 @@ in
         enableNixpkgsReleaseCheck = false;
         packages = pkgs.callPackage ./packages.nix { };
         file = {
-          ".config/kitty" = { source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixfiles/kitty"; };
           ".config/wezterm" = { source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixfiles/wezterm"; };
           ".config/nvim" = { source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixfiles/nvim"; };
         };
@@ -49,7 +48,7 @@ in
   local.dock.enable = true;
   local.dock.entries = [
     { path = "/Applications/Arc.app/"; }
-    { path = "~/Applications/Home Manager Apps/kitty.app/"; }
+    { path = "~/Applications/Home Manager Apps/WezTerm.app/"; }
     { path = "~/Applications/Home Manager Apps/Bruno.app/"; }
     { path = "/Applications/Sofa.app/"; }
     { path = "/Applications/GeForceNOW.app/"; }
