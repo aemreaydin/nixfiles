@@ -28,8 +28,8 @@ with pkgs; [
   wezterm
 
   # Shell and Command-Line Utilities
+  bashInteractive
   thefuck
-  bat
   oh-my-zsh
   fzf
   zoxide

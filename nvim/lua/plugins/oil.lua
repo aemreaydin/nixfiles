@@ -11,12 +11,6 @@ return {
         ["<Esc>"] = "actions.close",
       },
       float = {
-        max_height = math.ceil(vim.o.lines * 0.4),
-        max_width = math.ceil(vim.o.columns * 0.4),
-        border = "rounded",
-        win_options = {
-          winblend = 0,
-        },
         padding = 5,
       },
     })
