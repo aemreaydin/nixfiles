@@ -9,13 +9,28 @@ with pkgs; [
   go-task
   sqlc
   vcpkg
-  python3
+  #Rust
+  rustup
+  cargo-cache
+  cargo-deb
+  cargo-license
+  cargo-limit
+  cargo-make
+  cargo-modules
+  cargo-outdated
+  cargo-udeps
+  cargo-watch
+  cargo-expand
+  cargo-shuttle
+  # Python
+  # python312.withPackages
+  # (python-pkgs: with python-pkgs; [
+  #   pip
+  # ])
+  # Node
   nodejs
   nodePackages.npm
   nodePackages.prettier
-  (pkgs.writeShellScriptBin "rust" ''
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-  '')
 
   # Version Control and Git Tools
   lazygit
@@ -37,7 +52,9 @@ with pkgs; [
   bat
   ranger
   jq
+  jd-diff-patch
   tree-sitter
+  gnupg
 
   # System Monitoring and Management
   btop
