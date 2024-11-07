@@ -55,6 +55,9 @@ with pkgs; [
   jd-diff-patch
   tree-sitter
   gnupg
+  sq
+  poppler
+  yazi
 
   # System Monitoring and Management
   btop
@@ -70,6 +73,7 @@ with pkgs; [
   # Network Tools
   wget
   openssh
+  openssl
 
   # API Development and Testing
   bruno
@@ -88,7 +92,4 @@ with pkgs; [
 
   # Communication
   discord
-
-  # Application Launchers
-  raycast
 ]

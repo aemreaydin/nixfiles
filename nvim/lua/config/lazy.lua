@@ -20,6 +20,8 @@ require("lazy").setup({
 
     { "nvim-neo-tree/neo-tree.nvim", enabled = false },
     { "akinsho/bufferline.nvim", enabled = false },
+    { "garymjr/nvim-snippets", enabled = false },
+    { "rafamadriz/friendly-snippets", enabled = false },
 
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.angular" },

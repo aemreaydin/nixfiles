@@ -3,6 +3,12 @@ return {
   version = vim.fn.has("nvim-0.10.0") == 0 and "^4" or false,
   ft = { "rust" },
   opts = {
+    tools = {
+      float_win_config = {
+        border = "none",
+        width = "80%",
+      },
+    },
     server = {
       on_attach = function(_, bufnr)
         vim.keymap.set("n", "<leader>cR", function()
