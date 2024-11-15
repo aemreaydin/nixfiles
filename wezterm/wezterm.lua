@@ -3,7 +3,7 @@ local config = wezterm.config_builder()
 local act = wezterm.action
 
 config.color_scheme = "tokyonight-day"
--- config.color_scheme = "catppuccin-latte"
+config.color_scheme = "catppuccin-mocha"
 config.front_end = "WebGpu"
 
 config.font = wezterm.font("MonoLisa Nerd Font", { weight = "Bold" })
